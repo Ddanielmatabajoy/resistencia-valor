@@ -83,8 +83,16 @@ function calcular() {
 
     let resultadoFinal = valor * multiplicador;
 
-    document.getElementById("resultado").innerHTML =
-        `Valor: ${resultadoFinal} Ω <br> Tolerancia: ${tolerancia}`;
+    let display = `Valor: ${resultadoFinal} Ω <br> Tolerancia: ${tolerancia}`;
+
+    if (tolerancia !== "Sin tolerancia") {
+        let tolPercent = parseFloat(tolerancia.replace("±", "").replace("%", ""));
+        let min = resultadoFinal * (1 - tolPercent / 100);
+        let max = resultadoFinal * (1 + tolPercent / 100);
+        display += `<br> Rango: ${min} Ω - ${max} Ω`;
+    }
+
+    document.getElementById("resultado").innerHTML = display;
 }
 
 function resetear() {
