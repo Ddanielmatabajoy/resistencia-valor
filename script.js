@@ -87,6 +87,12 @@ function calcular() {
         `Valor: ${resultadoFinal} Ω <br> Tolerancia: ${tolerancia}`;
 }
 
+function resetear() {
+    document.getElementById("tipo").value = "4";
+    generarSelectores();
+    document.getElementById("resultado").innerHTML = "";
+}
+
 document.getElementById("tipo").addEventListener("change", generarSelectores);
 
 generarSelectores();
