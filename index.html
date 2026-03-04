@@ -19,8 +19,20 @@
     <div id="selectors"></div>
 
     <button onclick="calcular()">Calcular</button>
+    <button class="btn-reset" onclick="resetear()">Resetear</button>
 
     <div class="resultado" id="resultado"></div>
+
+    <div class="instrucciones">
+        <h3>¿Cómo usar la calculadora?</h3>
+        <ol>
+            <li>Selecciona el <strong>tipo de resistencia</strong>: 4 bandas o 5 bandas.</li>
+            <li>Elige el <strong>color de cada banda</strong> según los colores de tu resistencia física.</li>
+            <li>Pulsa el botón <strong>Calcular</strong> para obtener el valor en ohmios y la tolerancia.</li>
+            <li>Usa el botón <strong>Resetear</strong> para limpiar todas las selecciones y empezar de nuevo.</li>
+        </ol>
+        <p>La previsualización de la resistencia se actualiza automáticamente al cambiar los colores.</p>
+    </div>
 
     <div class="resistor-container">
         <div class="resistor-wire"></div>
